@@ -309,9 +309,10 @@ centrifugeProto._ajax = function (url, params, headers, data, callback) {
         query = '?' + query;
     }
     xhr.open('POST', url + query, true);
-    if ('withCredentials' in xhr) {
-        xhr.withCredentials = true;
-    }
+    // TODO: commented by Gustavo Garcia
+    // if ('withCredentials' in xhr) {
+    //     xhr.withCredentials = true;
+    // }
 
     // add request headers
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
